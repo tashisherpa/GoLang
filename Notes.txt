@@ -1,0 +1,55 @@
+Introduction
+
+6 main points about GO
+
+1. Statically Typed Language:
+    meaning you have to either declare variable types explicityly or they have to be inferred and these types cannot change afterwards at least without type conversion.
+
+    Example:
+        var myVariable string //explicityly
+        var myVariable = "myString" //inferred to be string
+
+2. Strong Typed Language
+    I.E the opetation you can perform on the variable depends on the type for example:
+    In Go:
+        a = 1
+        b = "two"
+        c = a + b //cannot add a interger and a string together
+
+    In a Weakly Typed Language like JS, it is allowed.
+
+Note: Due to Go being Statically and Strongly typed Language has its advantages in that the compliler can do more thorough chicking of your code for errors and force you to fix bugs before you can even execute your programs. You also get better code completion and hinting when developing as it is more clear what each varaible is in your code.
+
+3. Go is Complied
+    Go also comes with a compiler which translates your code into machine code producing a binary file which can be ran as a standalone program. This in contrast with some languages like Python which use interpreters these translate the code line byline as the code is running adding some overhead which can make the execution much slower as compared to executing a pre-compiled binary file.
+
+4. Fast Complie Time
+    Compile time itself is very fast being able to go from the code you wrote to a runnable binary without having to wait around a long time makes the testing processes a lot nicer for developers.
+
+5. Built in Concurrency
+    You dont need special packages or workarounds to get parallelism working in go. This is built in the language done with what's called go routines.
+
+6. Simplicity
+    this is a general design philosophy of Go. It's syntax is pretty concise meaning you can do much more by writing les lines of code and its also has things like garbage collection which automatically frees up unused memory this is something you don't have to manage yourself.
+
+Two things about the structure of Go code:
+
+Packages:
+    Package is just a folder that contains a collection of go files
+    Example:
+    Package 1:                      Package 2:
+      |- file_1.go                  |- file_1.go
+      |- file_2.go                  |- file_2.go
+
+Modules:
+    Module is the collection of packages
+
+Note: When we are initializing our project we are really initializing a new module
+
+Starting a new project
+    To start a new project/module we type:
+    go mod init <name of your module>
+                        |
+                the name can be whatever you want
+                Usually it's anmed to be its location in a Github repository
+
