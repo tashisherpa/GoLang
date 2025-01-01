@@ -212,5 +212,4 @@ func main() {
 
 	var myName = strBuilder.String()
 	fmt.Println(myName)
-
 }
