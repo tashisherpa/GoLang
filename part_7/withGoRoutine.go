@@ -13,7 +13,10 @@ import (
 	and the CPU can move on two the next goroutine.
 
 	But if we have more computationally expensive tasks though the performance
-	gain we get is going to be limited by the amount of cores we have
+	gain we get is going to be limited by the amount of cores we have. In these cases
+	goroutines need to actually do some work and because if lets say you have 8cores in
+	your machine, you can run 8 of these go routines at once and the rest of the goroutines
+	have to wait until there is a CPU core available.
 */
 func withGoRoutine(){
 	t0 := time.Now()
